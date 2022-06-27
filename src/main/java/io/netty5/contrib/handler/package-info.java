@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 The Netty Project
+ * Copyright 2022 The Netty Project
  *
  * The Netty Project licenses this file to you under the Apache License,
  * version 2.0 (the "License"); you may not use this file except in compliance
@@ -15,6 +15,9 @@
  */
 
 /**
- * Template contrib package-info.
+ * This package contains a handler that can convert {@link io.netty.buffer.ByteBuf} instances into
+ * {@link io.netty5.buffer.api.Buffer}, and vice versa.
+ * <p>
+ * This can be used to build pipelines that contain handlers that operate on different buffer types.
  */
-package io.netty.contrib.template;
+package io.netty5.contrib.handler;
