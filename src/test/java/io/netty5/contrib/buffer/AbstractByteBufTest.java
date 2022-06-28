@@ -17,7 +17,7 @@ package io.netty5.contrib.buffer;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;
-import io.netty5.util.ByteProcessor;
+import io.netty.util.ByteProcessor;
 import io.netty5.util.CharsetUtil;
 import io.netty5.util.IllegalReferenceCountException;
 import io.netty5.util.internal.PlatformDependent;

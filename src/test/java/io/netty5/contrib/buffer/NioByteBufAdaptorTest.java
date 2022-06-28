@@ -15,7 +15,6 @@
  */
 package io.netty5.contrib.buffer;
 
-import io.netty5.buffer.api.adaptor.ByteBufAllocatorAdaptor;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
