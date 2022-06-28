@@ -23,9 +23,9 @@
   </parent>
 
   <groupId>io.netty.contrib</groupId>
-  <artifactId>netty-template</artifactId>
+  <artifactId>netty5-bytebuf-adaptors</artifactId>
   <version>5.0.0.Final-SNAPSHOT</version>
-  <name>Netty/Codec/Template</name>
+  <name>Netty/Codec/ByteBuf Adaptors</name>
   <packaging>jar</packaging>
   <url>https://netty.io/</url>
   <description>
@@ -48,9 +48,9 @@
   <inceptionYear>2021</inceptionYear>
 
   <scm>
-    <url>https://github.com/netty-contrib/template</url>
-    <connection>scm:git:https://github.com/netty-contrib/template.git</connection>
-    <developerConnection>scm:git:https://github.com/netty-contrib/template.git</developerConnection>
+    <url>https://github.com/netty-contrib/bytebuf-adaptors</url>
+    <connection>scm:git:https://github.com/netty-contrib/bytebuf-adaptors.git</connection>
+    <developerConnection>scm:git:https://github.com/netty-contrib/bytebuf-adaptors.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
@@ -66,8 +66,8 @@
   </developers>
 
   <properties>
-    <javaModuleName>io.netty.contrib.template</javaModuleName>
-    <netty.version>5.0.0.Final-SNAPSHOT</netty.version>
+    <javaModuleName>io.netty.contrib.bytebufadaptors</javaModuleName>
+    <netty.version>5.0.0.Alpha3-SNAPSHOT</netty.version>
     <netty.build.version>29</netty.build.version>
     <project.scm.id>github</project.scm.id>
     <release.gpg.keyname />
@@ -283,10 +283,21 @@
       <artifactId>netty5-codec</artifactId>
       <version>${netty.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-buffer</artifactId>
+      <version>4.1.78.Final</version>
+    </dependency>
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.8.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
       <version>5.8.2</version>
       <scope>test</scope>
     </dependency>

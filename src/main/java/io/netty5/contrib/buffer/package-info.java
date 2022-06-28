@@ -13,18 +13,8 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package io.netty.contrib.template;
-
-import io.netty5.buffer.api.Buffer;
-import io.netty5.channel.ChannelHandlerContext;
-import io.netty5.handler.codec.ByteToMessageDecoderForBuffer;
 
 /**
- * Example Netty extension.
+ * Helpers for integrating with the existing {@link io.netty.buffer.ByteBuf} API.
  */
-public class ExampleDecoder extends ByteToMessageDecoderForBuffer {
-    @Override
-    protected void decode(ChannelHandlerContext ctx, Buffer in) throws Exception {
-        ctx.fireChannelRead(in.split());
-    }
-}
+package io.netty5.contrib.buffer;
