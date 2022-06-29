@@ -20,7 +20,6 @@ import io.netty5.buffer.api.Buffer;
 import io.netty5.contrib.buffer.ByteBufAdaptor;
 import io.netty5.contrib.buffer.ByteBufBuffer;
 import io.netty5.channel.ChannelHandler;
-import io.netty5.channel.ChannelHandler.Sharable;
 import io.netty5.channel.ChannelHandlerContext;
 import io.netty5.util.concurrent.Future;
 
@@ -35,10 +34,9 @@ import io.netty5.util.concurrent.Future;
  * It is, however, recommended that all handlers eventually be converted to use the {@link Buffer} API, as that is more
  * future-proof.
  * <p>
- * Instances of this handler are {@link Sharable} and can be added to multiple pipelines.
+ * Instances of this handler are {@linkplain #isSharable() sharable} and can be added to multiple pipelines.
  * This is safe because the instances are immutable and thread-safe.
  */
-@Sharable
 public final class BufferConversionHandler implements ChannelHandler {
     private final Conversion onRead;
     private final Conversion onWrite;
@@ -120,6 +118,11 @@ public final class BufferConversionHandler implements ChannelHandler {
     @Override
     public Future<Void> write(ChannelHandlerContext ctx, Object msg) {
         return ctx.write(onWrite.convert(msg));
+    }
+
+    @Override
+    public boolean isSharable() {
+        return true;
     }
 
     /**
